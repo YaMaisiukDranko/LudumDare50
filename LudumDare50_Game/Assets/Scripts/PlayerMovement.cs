@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float jumpForce = 14f;
 
-    private enum MovementState { idle, running, jumping, falling }
+    private enum MovementState { idle, running, jumping, falling, attack1, attack2, attack3 }
 
     [SerializeField] private AudioSource jumpSoundEffect;
 
@@ -69,6 +69,24 @@ public class PlayerMovement : MonoBehaviour
         else if (rb.velocity.y < -.1f)
         {
             state = MovementState.falling;
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            int randomAttack = Random.Range(1, 3);
+
+            if (randomAttack == 1)
+            {
+                state = MovementState.attack1;
+            }
+            else if (randomAttack == 2)
+            {
+                state = MovementState.attack2;
+            }
+            else if (randomAttack == 3)
+            {
+                state = MovementState.attack3;
+            }
         }
 
         anim.SetInteger("state", (int)state);
