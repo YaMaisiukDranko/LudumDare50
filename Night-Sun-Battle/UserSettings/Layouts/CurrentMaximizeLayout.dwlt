@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 1492
+  controlID: 1714
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -272,9 +272,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -5.3518286, y: -7.016993, z: -0.027350184}
+    m_Target: {x: 4.6506147, y: -4.66307, z: -0.011146726}
     speed: 2
-    m_Value: {x: -5.3472276, y: -7.022158, z: -0.027552878}
+    m_Value: {x: 4.6420417, y: -4.6611843, z: -0.011057757}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -325,9 +325,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 13.492652
+    m_Target: 11.872295
     speed: 2
-    m_Value: 13.512921
+    m_Value: 11.863399
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -376,7 +376,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 1493
+  controlID: 1715
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -401,7 +401,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 1494
+  controlID: 1716
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -459,8 +459,8 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: a4f0ffff
-      m_LastClickedID: -3932
+      m_SelectedIDs: 16eeffff
+      m_LastClickedID: -4586
       m_ExpandedIDs: bcf6ffff1efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
@@ -572,7 +572,7 @@ MonoBehaviour:
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
     m_HSlider: 0
-    m_VSlider: 0
+    m_VSlider: 1
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
@@ -585,7 +585,7 @@ MonoBehaviour:
       y: 21
       width: 862
       height: 472
-    m_Scale: {x: 0.8740741, y: 0.8740741}
+    m_Scale: {x: 0.8979167, y: 0.8979167}
     m_Translation: {x: 431, y: 236}
     m_MarginLeft: 0
     m_MarginRight: 0
@@ -593,12 +593,12 @@ MonoBehaviour:
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -493.0932
-      y: -270
-      width: 986.1864
-      height: 540
+      x: -480
+      y: -262.83063
+      width: 960
+      height: 525.66125
     m_MinimalGUI: 1
-  m_defaultScale: 0.8740741
+  m_defaultScale: 0.8979167
   m_LastWindowPixelSize: {x: 1724, y: 986}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
@@ -701,21 +701,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Sprites
+    - Assets
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Sprites
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/yaroslavmoisiuk/Unity/LudumDare50/Night-Sun-Battle
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 0e640000
-    m_LastClickedID: 25614
+    m_SelectedIDs: e6630000
+    m_LastClickedID: 25574
     m_ExpandedIDs: 00000000e663000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -769,8 +769,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: a4f0ffff
-    m_LastClickedInstanceID: -3932
+    m_SelectedInstanceIDs: 16eeffff
+    m_LastClickedInstanceID: -4586
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
