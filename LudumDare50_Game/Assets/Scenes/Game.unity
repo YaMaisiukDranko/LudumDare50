@@ -6324,7 +6324,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2147483647
   moveSpeed: 7
-  jumpForce: 14
+  jumpForce: 100
   jumpSoundEffect: {fileID: 0}
 --- !u!212 &2055002684
 SpriteRenderer:

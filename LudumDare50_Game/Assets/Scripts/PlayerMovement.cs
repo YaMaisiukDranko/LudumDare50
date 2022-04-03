@@ -51,29 +51,29 @@ public class PlayerMovement : MonoBehaviour
         {
             //state = MovementState.running;
             sprite.flipX = false;
-            anim.SetBool("running", true);
+            anim.SetTrigger("running");
         }
         else if (dirX < 0f)
         {
             //state = MovementState.running;
             sprite.flipX = true;
-            anim.SetBool("running", true);
+            anim.SetTrigger("running");
         }
         else
         {
             //state = MovementState.idle;
-            anim.SetBool("idle", true);
+            anim.SetTrigger("idle");
         }
 
         if (rb.velocity.y > .1f)
         {
             state = MovementState.jumping;
-            anim.SetBool("jumping", true);
+            anim.SetTrigger("jumping");
             
         }
         else if (rb.velocity.y < -.1f)
         {
-            state = MovementState.falling;
+            //state = MovementState.falling;
         }
 
         if (Input.GetMouseButtonDown(0))
@@ -84,14 +84,16 @@ public class PlayerMovement : MonoBehaviour
             if (randomAttack == 1)
             {
                 state = MovementState.attack1;
+                anim.SetTrigger("attack1");
             }
             else if (randomAttack == 2)
             {
                 state = MovementState.attack2;
+                anim.SetTrigger("attack2");
             }
             else if (randomAttack == 3)
             {
-                
+                anim.SetTrigger("attack3");
             }
         }
 

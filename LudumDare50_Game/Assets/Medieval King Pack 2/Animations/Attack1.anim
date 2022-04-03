@@ -20,17 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 6934013284892070054, guid: a69f9e788982b8746a34ef183bb4aacf,
-        type: 3}
+      value: {fileID: 6934013284892070054, guid: a69f9e788982b8746a34ef183bb4aacf, type: 3}
     - time: 0.083333336
-      value: {fileID: -7957278214813060823, guid: a69f9e788982b8746a34ef183bb4aacf,
-        type: 3}
+      value: {fileID: -7957278214813060823, guid: a69f9e788982b8746a34ef183bb4aacf, type: 3}
     - time: 0.16666667
-      value: {fileID: 1409549213185883415, guid: a69f9e788982b8746a34ef183bb4aacf,
-        type: 3}
+      value: {fileID: 1409549213185883415, guid: a69f9e788982b8746a34ef183bb4aacf, type: 3}
     - time: 0.25
-      value: {fileID: 4976274401295337057, guid: a69f9e788982b8746a34ef183bb4aacf,
-        type: 3}
+      value: {fileID: 4976274401295337057, guid: a69f9e788982b8746a34ef183bb4aacf, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -64,7 +60,7 @@ AnimationClip:
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 1
+    m_LoopTime: 0
     m_LoopBlend: 0
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
