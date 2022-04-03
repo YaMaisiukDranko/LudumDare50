@@ -16,23 +16,6 @@ public class EnemyScript : MonoBehaviour
         _animator = GetComponent<Animator>();
     }
 
-    private void Update()
-    {
-        
-    }
-
-    void Walk()
-    {
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            //_animator.SetTrigger("walk");
-
-            dirX = Input.GetAxisRaw("Horizontal");
-            rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
-        }
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -44,7 +27,6 @@ public class EnemyScript : MonoBehaviour
         if (!other.CompareTag("Player") || touchPlayer == true)
         {
             _animator.SetTrigger("walk");
-            Walk();
         }
     }
 }
