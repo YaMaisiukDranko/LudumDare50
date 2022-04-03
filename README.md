@@ -1,2 +1,2 @@
 # LudumDare50
-## Game - *Night Sun Battle*
+## Game - *Night Castle Battle*
