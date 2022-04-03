@@ -39,6 +39,7 @@ public class WaveSpawner : MonoBehaviour
                     waveName.text = waves[currentWaveNumber + 1].waveName;
                     animator.SetTrigger("WaveComplete");
                     canAnimate = false;
+                    waveName.text = "Wave " + currentWaveNumber;
                 }
                 
             }
