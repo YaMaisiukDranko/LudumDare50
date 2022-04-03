@@ -49,31 +49,37 @@ public class PlayerMovement : MonoBehaviour
 
         if (dirX > 0f)
         {
-            state = MovementState.running;
+            //state = MovementState.running;
             sprite.flipX = false;
+            anim.SetBool("running", true);
         }
         else if (dirX < 0f)
         {
-            state = MovementState.running;
+            //state = MovementState.running;
             sprite.flipX = true;
+            anim.SetBool("running", true);
         }
         else
         {
-            state = MovementState.idle;
+            //state = MovementState.idle;
+            anim.SetBool("idle", true);
         }
 
         if (rb.velocity.y > .1f)
         {
             state = MovementState.jumping;
+            anim.SetBool("jumping", true);
+            
         }
         else if (rb.velocity.y < -.1f)
         {
             state = MovementState.falling;
         }
 
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(0))
         {
             int randomAttack = Random.Range(1, 3);
+            Debug.Log("Attack!");
 
             if (randomAttack == 1)
             {
@@ -85,11 +91,11 @@ public class PlayerMovement : MonoBehaviour
             }
             else if (randomAttack == 3)
             {
-                state = MovementState.attack3;
+                
             }
         }
 
-        anim.SetInteger("state", (int)state);
+        //anim.SetInteger("state", (int)state);
     }
 
     private bool IsGrounded()
