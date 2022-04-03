@@ -28,15 +28,21 @@ public class PlayerMovement : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
+    private bool IsGrounded(bool b)
+    {
+        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
+    }
+    
     // Update is called once per frame
     private void Update()
     {
         dirX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
 
-        if (Input.GetButtonDown("Jump") && IsGrounded())
+        if (Input.GetKeyDown(KeyCode.Space) && IsGrounded(true))
         {
-            jumpSoundEffect.Play();
+            Debug.Log("JUMP");
+            //jumpSoundEffect.Play();
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
         }
 
@@ -65,15 +71,23 @@ public class PlayerMovement : MonoBehaviour
             anim.SetTrigger("idle");
         }
 
-        if (rb.velocity.y > .1f)
+        if (rb.velocity.y > .1f && !IsGrounded(true))
         {
             state = MovementState.jumping;
             anim.SetTrigger("jumping");
             
         }
-        else if (rb.velocity.y < -.1f)
+        else if (rb.velocity.y < -.1f && !IsGrounded(true))
         {
             //state = MovementState.falling;
+            anim.SetTrigger("falling");
+        }
+        else
+        {
+            if (IsGrounded(true))
+            {
+                anim.SetTrigger("grounded");
+            }
         }
 
         if (Input.GetMouseButtonDown(0))
@@ -99,9 +113,7 @@ public class PlayerMovement : MonoBehaviour
 
         //anim.SetInteger("state", (int)state);
     }
+    
 
-    private bool IsGrounded()
-    {
-        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
-    }
+    
 }

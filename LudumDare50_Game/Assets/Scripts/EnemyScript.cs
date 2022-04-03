@@ -5,7 +5,11 @@ using UnityEngine;
 
 public class EnemyScript : MonoBehaviour
 {
-    private Animator _animator;
+    public Animator _animator;
+    private float dirX = 0f;
+    private Rigidbody rb;
+    public int moveSpeed = 10;
+    public bool touchPlayer;
 
     private void Start()
     {
@@ -17,16 +21,30 @@ public class EnemyScript : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    void Walk()
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (Input.GetKeyDown(KeyCode.S))
         {
-            
+            //_animator.SetTrigger("walk");
+
+            dirX = Input.GetAxisRaw("Horizontal");
+            rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
         }
+        
     }
 
-    void UpdateAnimationState()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.CompareTag("Player"))
+        {
+            _animator.SetTrigger("attack");
+            //Health -
+        }
+
+        if (!other.CompareTag("Player") || touchPlayer == true)
+        {
+            _animator.SetTrigger("walk");
+            Walk();
+        }
     }
 }
