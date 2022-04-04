@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -36,7 +37,11 @@ public class EnemyScript : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("enemy die");
+        Debug.Log("enemy die " + name);
+        _animator.SetBool("Died", true);
+        GetComponent<EnemyFollow>().enabled = false;
+        Destroy(this);
+        this.enabled = false;
     }
 
 private void OnTriggerEnter2D(Collider2D other)

@@ -90,26 +90,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            int randomAttack = Random.Range(1, 3);
-            Debug.Log("Attack!");
-
-            if (randomAttack == 1)
-            {
-                state = MovementState.attack1;
-                anim.SetTrigger("attack1");
-            }
-            else if (randomAttack == 2)
-            {
-                state = MovementState.attack2;
-                anim.SetTrigger("attack2");
-            }
-            else if (randomAttack == 3)
-            {
-                anim.SetTrigger("attack3");
-            }
-        }
+        
 
         //anim.SetInteger("state", (int)state);
     }
