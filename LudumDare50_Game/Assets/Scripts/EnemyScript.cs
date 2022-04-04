@@ -12,15 +12,34 @@ public class EnemyScript : MonoBehaviour
     private Transform enemyTransform;
     private SpriteRenderer enemySprite;
 
+    public int maxHealth = 100;
+    private int currentHealth;
+
     private void Start()
     {
         _animator = GetComponent<Animator>();
         enemyTransform = GetComponent<Transform>();
         enemySprite = GetComponent<SpriteRenderer>();
         _animator.SetTrigger("walk");
+        currentHealth = maxHealth;
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Debug.Log("enemy die");
+    }
+
+private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("PlayerTarget"))
         {

@@ -8,6 +8,7 @@ public class PlayerAttacks : MonoBehaviour
     public Transform AttackPoint;
     public float AttackRange = 0.5f;
     public LayerMask enemyLayers;
+    public int attackDamage = 100;
 
     private void Update()
     {
@@ -20,6 +21,7 @@ public class PlayerAttacks : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             Debug.Log("we hit " + enemy.name);
+            enemy.GetComponent<EnemyScript>().TakeDamage(attackDamage);
         }
     }
 
