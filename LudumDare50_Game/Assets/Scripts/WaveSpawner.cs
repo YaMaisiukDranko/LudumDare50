@@ -41,7 +41,6 @@ public class WaveSpawner : MonoBehaviour
                     canAnimate = false;
                     waveName.text = "Wave " + currentWaveNumber;
                 }
-                
             }
             else
             {

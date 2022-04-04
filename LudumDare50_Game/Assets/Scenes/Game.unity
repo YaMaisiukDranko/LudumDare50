@@ -6508,7 +6508,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  stoppingDistance: 2
+  stoppingDistance: 1
 --- !u!1 &468264340
 GameObject:
   m_ObjectHideFlags: 0
