@@ -39,7 +39,14 @@ public class HealthBar : MonoBehaviour
             {
                 hearts[i].enabled = false;
             }
-            
+        }
+
+        if (health == 0)
+        {
+            Debug.Log("Game Over");
+        }
+        else
+        {
             
         }
     }
