@@ -1,5 +1,8 @@
 # *Night Castle Battle* - Game for LUDUM DARE 50
 
+<img width="843" alt="Снимок экрана 2022-04-04 в 22 32 58" src="https://user-images.githubusercontent.com/44410069/161619628-494bfb51-66bf-477d-8228-7045523c0933.png">
+
+
 ### Scenario
 You sit quietly, the weather suddenly changes and death flies up to you on a cloud with a scythe and says:
 
