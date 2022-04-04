@@ -9,12 +9,14 @@ public class HealthBar : MonoBehaviour
     public int health;
     public int numOfHearts;
 
+    public AudioSource audio;
     public Image[] hearts;
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
     private void Update()
     {
+        audio.PlayDelayed(5);
         if (health > numOfHearts)
         {
             health = numOfHearts;
@@ -39,7 +41,14 @@ public class HealthBar : MonoBehaviour
             {
                 hearts[i].enabled = false;
             }
-            
+        }
+
+        if (health == 0)
+        {
+            Debug.Log("Game Over");
+        }
+        else
+        {
             
         }
     }
