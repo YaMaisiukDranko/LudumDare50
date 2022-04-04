@@ -11,20 +11,25 @@ public class PlayerAttacks : MonoBehaviour
     public LayerMask enemyLayers;
     public int attackDamage = 100;
     private Animator anim;
+    public ParticleSystem particle;
+    public AudioSource audio;
     private void Start()
     {
         AttackPoint.gameObject.SetActive(false);
+        audio = GetComponent<AudioSource>();
     }
 
     private void Update()
     {
-        Attack(); 
+        Attack();
+        //particle = GetComponent<ParticleSystem>();
     }
 
     void Attack()
     {
         if (Input.GetMouseButtonDown(0))
         {
+            audio.PlayDelayed(0.4f); // Play audio source
             anim = GetComponent<Animator>();
             AttackPoint.gameObject.SetActive(false);AttackPoint.gameObject.SetActive(true);
             int randomAttack = Random.Range(1, 3);
@@ -47,8 +52,9 @@ public class PlayerAttacks : MonoBehaviour
         foreach (Collider2D enemy in hitEnemies)
         {
             Debug.Log("we hit " + enemy.name);
+            //particle.Play();
             enemy.GetComponent<EnemyScript>().TakeDamage(attackDamage);
-            enemy.GetComponent<EnemyFollow>().enabled = false;
+            //enemy.GetComponent<EnemyFollow>().enabled = false;
         }
         AttackPoint.gameObject.SetActive(false);
     }

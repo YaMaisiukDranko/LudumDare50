@@ -12,6 +12,7 @@ public class EnemyScript : MonoBehaviour
     private Rigidbody rb;
     private Transform enemyTransform;
     private SpriteRenderer enemySprite;
+    public ParticleSystem particle;
 
     public int maxHealth = 100;
     private int currentHealth;
@@ -37,10 +38,11 @@ public class EnemyScript : MonoBehaviour
 
     void Die()
     {
+        particle.Play();
+        Destroy(gameObject);
         Debug.Log("enemy die " + name);
         _animator.SetBool("Died", true);
         GetComponent<EnemyFollow>().enabled = false;
-        Destroy(this);
         this.enabled = false;
     }
 
@@ -61,6 +63,7 @@ private void OnTriggerEnter2D(Collider2D other)
 
     private void Update()
     {
+        particle = GetComponent<ParticleSystem>();
         if (enemyTransform.position.x > 0)
         {
             enemySprite.flipX = true;
