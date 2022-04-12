@@ -1,4 +1,4 @@
-# *Night Castle Battle* - LUDUM DARE 50 GAME
+# *Night Castle Battle*
 
 ![ldlogo](https://user-images.githubusercontent.com/44410069/162924599-3436ff97-d99d-4d66-99ab-2ed286f7e7c5.svg)
 <img width="843" alt="Снимок экрана 2022-04-04 в 22 32 58" src="https://user-images.githubusercontent.com/44410069/161619628-494bfb51-66bf-477d-8228-7045523c0933.png">
